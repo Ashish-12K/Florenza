@@ -1,37 +1,37 @@
 const products = [
   {
     id: 1,
-    name: "Gold Bracelet",
+    name: "Decorative Steel Box(Red)",
     price: 299,
-    image: "/images/Bracelets/b2.jpeg",
-    category: "bracelet",
+    image: "/images/Tiffin/tiffin-red.png",
+    category: "tiffin",
     isNew: true,
     isBestSeller: false
   },
   {
     id: 2,
-    name: "Silver Bracelet",
+    name: "Decorative Steel Box(Pink)",
     price: 299,
-    image: "/images/Bracelets/b3.jpeg",
-    category: "bracelet",
+    image: "/images/Tiffin/tiffin-pink.png",
+    category: "tiffin",
     isNew: true,
     isBestSeller: false
   },
   {
     id: 3,
-    name: "Flower Earring",
+    name: "Decorative Steel Box(Green)",
     price: 99,
-    image: "/images/Earring/e2.jpeg",
-    category: "earring",
+    image: "/images/Tiffin/tiffin-green.png",
+    category: "tiffin",
     isNew: true,
     isBestSeller: false
   },
   {
     id: 4,
-    name: "Necklace",
+    name: "Decorative Steel Box(Blue)",
     price: 199,
-    image: "/images/Necklace/n2.jpeg",
-    category: "necklace",
+    image: "/images/Tiffin/tiffin-blue.png",
+    category: "tiffin",
     isNew: true,
     isBestSeller: false
   },

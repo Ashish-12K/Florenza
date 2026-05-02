@@ -1,13 +1,13 @@
 import { useNavigate } from "react-router-dom";
 
 const categories = [
-  { name: "Resin", image: "/images/Resin/ResinBG.png", slug: "necklace" },
+  { name: "Resin", image: "/images/Resin/ResinBG.png", slug: "resin" },
   { name: "Earring", image: "/images/Earring/EarringBG.png", slug: "earring" },
-  { name: "Bangles", image: "/images/Bangles/BangleBG.png", slug: "bracelets" },
+  { name: "Bangles", image: "/images/Bangles/BangleBG.png", slug: "bangle" },
   { name: "Potli Bag", image: "/images/Potli/PotliBG.jpeg", slug: "rings" },
   { name: "Candles", image: "/images/Candle/CandleBG2.jpg", slug: "nosepin" },
   { name: "Hamper", image: "/images/Hampers/HamperBG.jpg", slug: "anklet" },
-  { name: "Tiffin Box", image: "/images/Tiffin/TiffinBG.png", slug: "nosepin" },
+  { name: "Tiffin Box", image: "/images/Tiffin/TiffinBG.png", slug: "tiffin" },
   { name: "Wedding Bell", image: "/images/WeddingBell/WeddingBellBG.png", slug: "nosepin" },
 ];
 
@@ -16,16 +16,24 @@ export default function Categories() {
 
   return (
     <section className="px-4 py-10">
-      <h2 className="text-xl font-semibold mb-6">
+      
+      {/* Heading */}
+      <h2 className="text-2xl md:text-3xl font-semibold text-center tracking-wide">
         Shop by collection
       </h2>
 
+      {/* Pink underline */}
+      <div className="flex justify-center mt-2 mb-8">
+        <div className="w-12 h-[2px] bg-rose-400 rounded-full"></div>
+      </div>
+
+      {/* Grid */}
       <div className="grid grid-cols-3 md:grid-cols-4 gap-3 md:gap-4">
         {categories.map((item, index) => (
           <div
             key={index}
             onClick={() => navigate(`/category/${item.slug}`)}
-            className="relative group cursor-pointer overflow-hidden rounded"
+            className="relative group cursor-pointer overflow-hidden rounded-lg"
           >
             <img
               src={item.image}
@@ -33,12 +41,14 @@ export default function Categories() {
               className="w-full h-[140px] md:h-[300px] object-cover transition duration-300 group-hover:scale-105"
             />
 
-            <span className="absolute bottom-2 right-2 bg-white text-xs px-2 py-1 rounded shadow">
+            {/* Label */}
+            <span className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur text-xs px-3 py-1 rounded-full shadow-sm">
               {item.name}
             </span>
           </div>
         ))}
       </div>
+
     </section>
   );
 }

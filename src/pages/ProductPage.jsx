@@ -1,37 +1,37 @@
 import { useParams, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import products from "../data/products";
-import { useEffect } from "react";
 import { useCart } from "../context/CartContext";
 
 export default function ProductPage() {
   const { id } = useParams();
   const navigate = useNavigate();
   const { addToCart } = useCart();
-  const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState("1"); // string for smooth typing
 
   const product = products.find((p) => p.id === Number(id));
 
   useEffect(() => {
-  window.scrollTo(0, 0);
-}, [id]);
+    window.scrollTo(0, 0);
+  }, [id]);
 
   if (!product) return <p className="p-6">Product not found</p>;
 
-  // 👉 Similar products (same category, exclude current)
   const similarProducts = products
     .filter(
       (p) => p.category === product.category && p.id !== product.id
     )
     .slice(0, 4);
 
-  const increase = () => setQuantity((q) => q + 1);
-  const decrease = () => {
-    if (quantity > 1) setQuantity((q) => q - 1);
+  const increase = () => {
+    setQuantity((q) => String(Number(q || 0) + 1));
   };
 
-
-  
+  const decrease = () => {
+    if (Number(quantity) > 1) {
+      setQuantity((q) => String(Number(q) - 1));
+    }
+  };
 
   return (
     <div className="px-6 py-10">
@@ -43,6 +43,7 @@ export default function ProductPage() {
         <div className="md:w-1/2">
           <img
             src={product.image}
+            alt={product.name}
             className="w-full h-[300px] md:h-[400px] object-cover rounded"
           />
         </div>
@@ -70,7 +71,8 @@ export default function ProductPage() {
           <div className="mt-6 flex items-center gap-4">
             <span className="text-sm">Quantity:</span>
 
-            <div className="flex items-center border rounded">
+            <div className="flex items-center border rounded overflow-hidden">
+
               <button
                 onClick={decrease}
                 className="px-3 py-1 hover:bg-gray-100"
@@ -78,7 +80,17 @@ export default function ProductPage() {
                 -
               </button>
 
-              <span className="px-4">{quantity}</span>
+              <input
+                type="number"
+                value={quantity}
+                onChange={(e) => setQuantity(e.target.value)}
+                onBlur={() => {
+                  if (!quantity || Number(quantity) < 1) {
+                    setQuantity("1");
+                  }
+                }}
+                className="w-16 text-center outline-none"
+              />
 
               <button
                 onClick={increase}
@@ -86,6 +98,7 @@ export default function ProductPage() {
               >
                 +
               </button>
+
             </div>
           </div>
 
@@ -94,7 +107,8 @@ export default function ProductPage() {
 
             <button
               onClick={() => {
-                for (let i = 0; i < quantity; i++) {
+                const qty = Number(quantity) || 1;
+                for (let i = 0; i < qty; i++) {
                   addToCart(product);
                 }
               }}
@@ -104,15 +118,16 @@ export default function ProductPage() {
             </button>
 
             <button
-                onClick={() => {
-                  for (let i = 0; i < quantity; i++) {
-                    addToCart(product);
-                  }
-                  navigate("/cart");
-                }}
-                className="bg-black text-white px-5 py-2 rounded hover:bg-gray-800 transition"
-              >
-                Buy Now
+              onClick={() => {
+                const qty = Number(quantity) || 1;
+                for (let i = 0; i < qty; i++) {
+                  addToCart(product);
+                }
+                navigate("/cart");
+              }}
+              className="bg-black text-white px-5 py-2 rounded hover:bg-gray-800 transition"
+            >
+              Buy Now
             </button>
 
           </div>
@@ -120,10 +135,10 @@ export default function ProductPage() {
         </div>
       </div>
 
-      {/* 🔥 Similar Products */}
+      {/* Similar Products */}
       <div className="mt-16">
 
-        <h2 className="text-lg font-semibold mb-6">
+        <h2 className="text-lg font-semibold mb-6 text-center">
           Similar Products
         </h2>
 
@@ -134,10 +149,10 @@ export default function ProductPage() {
               onClick={() => navigate(`/product/${item.id}`)}
               className="cursor-pointer hover:scale-105 transition duration-300"
             >
-
               <img
                 src={item.image}
-                className="w-full h-[200px] object-cover"
+                alt={item.name}
+                className="w-full h-[200px] object-cover rounded"
               />
 
               <p className="text-xs mt-2 text-center">
@@ -147,7 +162,6 @@ export default function ProductPage() {
               <p className="text-xs text-gray-600 text-center">
                 Rs. {item.price}.00
               </p>
-
             </div>
           ))}
         </div>
