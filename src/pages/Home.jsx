@@ -8,7 +8,6 @@ import FeatureBar from "../components/FeatureBar.jsx";
 export default function Home() {
   return (
     <div>
-    // <div className="bg-gray-50">
       <Hero />
       <Categories />
       <FeatureBar />
