@@ -41,15 +41,15 @@ const products = [
     isNew: false,
     isBestSeller: false
   },
-  {
-    id: 5,
-    name: "Bhaji Box",
-    price: 420,
-    image: "/images/Tiffin/t5.jpeg",
-    category: "box",
-    isNew: false,
-    isBestSeller: false
-  },
+  // {
+  //   id: 5,
+  //   name: "Bhaji Box",
+  //   price: 420,
+  //   image: "/images/Tiffin/t5.jpeg",
+  //   category: "box",
+  //   isNew: false,
+  //   isBestSeller: false
+  // },
   // {
   //   id: 6,
   //   name: "Decorative Steel Box(Blue)",
@@ -307,7 +307,7 @@ const products = [
     isBestSeller: true
   },
   {
-    id: 27,
+    id: 28,
     name: "Metalic jar combo ",
     price: 350,
     image: "/images/Hampers/h6.jpeg",
@@ -315,6 +315,147 @@ const products = [
     isNew: true,
     isBestSeller: true
   },
+  {
+    id: 29,
+    name: "Saree Pin ",
+    price: 49,
+    image: "/images/Under99/u1.jpeg",
+    category: "under99",
+    isNew: true,
+    isBestSeller: true
+  },
+  {
+    id: 30,
+    name: "Scented gajra  ",
+    price: 42,
+    image: "/images/Under99/u2.jpeg",
+    category: "under99",
+    isNew: true,
+    isBestSeller: true
+  },
+  {
+    id: 31,
+    name: "Bandhej braclet set",
+    price: 99,
+    image: "/images/Under99/u3.jpeg",
+    category: "under99",
+    isNew: true,
+    isBestSeller: true
+  },
+  {
+    id: 32,
+    name: "Tassel shell ring  ",
+    price: 49,
+    image: "/images/Under99/u4.jpeg",
+    category: "under99",
+    isNew: true,
+    isBestSeller: true
+  },
+  {
+    id: 33,
+    name: "Hand mirror",
+    price: 90,
+    image: "/images/Under99/u5.jpeg",
+    category: "under99",
+    isNew: true,
+    isBestSeller: true
+  },
+  {
+    id: 34,
+    name: "Decorative bindi",
+    price: 29,
+    image: "/images/Under99/u6.jpeg",
+    category: "under99",
+    isNew: true,
+    isBestSeller: true
+  },
+  {
+    id: 35,
+    name: "Decorative Mehendi cone",
+    price: 35,
+    image: "/images/Under99/u7.jpeg",
+    category: "under99",
+    isNew: true,
+    isBestSeller: true
+  },
+  {
+    id: 36,
+    name: "Evil eye ghunghroo sticks ",
+    price: 49,
+    image: "/images/Under99/u8.jpeg",
+    category: "under99",
+    isNew: true,
+    isBestSeller: true
+  },
+  {
+    id: 37,
+    name: "Sauf cones",
+    price: 35,
+    image: "/images/Under99/u10.jpeg",
+    category: "under99",
+    isNew: true,
+    isBestSeller: true
+  },
+  
+  {
+    id: 38,
+    name: "Barat swagat mala",
+    price: 35,
+    image: "/images/Under99/u11.jpeg",
+    category: "under99",
+    isNew: true,
+    isBestSeller: true
+  },
+  
+  {
+    id: 37,
+    name: "Phera bells",
+    price: 49,
+    image: "/images/Under99/u12.jpeg",
+    category: "under99",
+    isNew: true,
+    isBestSeller: true
+  },
+  {
+    id: 37,
+    name: "Krishna brooches",
+    price: 80,
+    image: "/images/Under99/u13.jpeg",
+    category: "under99",
+    isNew: true,
+    isBestSeller: true
+  },
+  {
+    id: 39,
+    name: "Haldi platter ",
+    price: 1800,
+    image: "/images/Wedding/w2.jpeg",
+    category: "wedding",
+    isNew: true,
+    isBestSeller: true,
+    isWedding: true
+  },
+  {
+    id: 39,
+    name: "Mehendi platter ",
+    price: 1800,
+    image: "/images/Wedding/w3.jpeg",
+    category: "wedding",
+    isNew: true,
+    isBestSeller: true,
+    isWedding: true
+  },
+  {
+    id: 39,
+    name: "Multi purpose platter",
+    price: 1999,
+    image: "/images/Wedding/W1.jpeg",
+    category: "wedding",
+    isNew: true,
+    isBestSeller: true,
+    isWedding: true
+  },
+  
 
 
 

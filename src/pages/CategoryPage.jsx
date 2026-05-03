@@ -7,24 +7,45 @@ export default function CategoryPage() {
   const navigate = useNavigate();
   const { addToCart } = useCart();
 
-  const filteredProducts = products.filter(
-    (item) => item.category === category
-  );
+  // 🔥 Improved filtering logic
+  const filteredProducts = products.filter((item) => {
+    if (category === "under-99") return item.price <= 99;
+
+    if (category === "wedding")
+      return item.tags?.includes("wedding") || item.isWedding;
+
+    return item.category === category;
+  });
+
+  // 🔥 Better heading format
+  const formatTitle = (text) => {
+    if (text === "under-99") return "Under ₹99";
+    if (text === "wedding") return "Wedding Essentials";
+
+    return text.charAt(0).toUpperCase() + text.slice(1);
+  };
 
   return (
     <div className="px-3 md:px-6 py-10">
 
       {/* Heading */}
-      <h1 className="text-lg md:text-2xl font-semibold mb-8 capitalize text-center">
-        {category}
+      <h1 className="text-lg md:text-2xl font-semibold mb-8 text-center">
+        {formatTitle(category)}
       </h1>
+
+      {/* Empty State */}
+      {filteredProducts.length === 0 && (
+        <p className="text-center text-gray-500 mt-10">
+          No products found in this category
+        </p>
+      )}
 
       {/* Grid */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
         {filteredProducts.map((item) => (
           <div
             key={item.id}
-            className="bg-white rounded-lg shadow-sm p-3 hover:shadow-md transition duration-300"
+            className="bg-white rounded-lg shadow-sm p-3 hover:shadow-md hover:-translate-y-1 transition duration-300"
           >
 
             {/* Image */}
@@ -52,10 +73,10 @@ export default function CategoryPage() {
             {/* Add to Cart */}
             <button
               onClick={(e) => {
-                e.stopPropagation(); // 🔥 prevent navigation
+                e.stopPropagation();
                 addToCart(item);
               }}
-              className="mt-3 w-full bg-[#a97142] text-white py-2 rounded-full text-xs hover:opacity-90 transition"
+              className="mt-3 w-full bg-[#a97142] text-white py-2 rounded-full text-xs hover:opacity-90"
             >
               ADD TO CART
             </button>
