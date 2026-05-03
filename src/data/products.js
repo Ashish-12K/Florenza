@@ -160,6 +160,15 @@ const products = [
     isNew: false,
     isBestSeller: true
   },
+  {
+    id: 18,
+    name: "4 Bangle Set",
+    price: 150,
+    image: "/images/Bangles/b11.jpeg",
+    category: "bangle",
+    isNew: false,
+    isBestSeller: true
+  },
   // Stands
 
   {
