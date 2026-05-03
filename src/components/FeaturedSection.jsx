@@ -89,21 +89,20 @@ export default function FeaturedSection() {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8 md:mt-10 md:h-[420px]">
 
         {/* LEFT - responsive */}
-        <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="md:col-span-2 grid grid-cols-2 gap-3 md:gap-6 md:h-full">
 
           {/* Wedding */}
           <div
             onClick={() => navigate("/category/wedding")}
-            className="relative rounded-lg overflow-hidden cursor-pointer group"
+            className="relative rounded-lg overflow-hidden cursor-pointer group h-[140px] md:h-full"
           >
             <img
               src="/images/Wedding/W1.jpeg"
-              alt="Wedding"
-              className="w-full h-[150px] md:h-full object-cover group-hover:scale-105 transition duration-500"
+              className="w-full h-full object-cover"
             />
 
-            <div className="absolute inset-0 flex items-end px-4 pb-4 text-white">
-              <h3 className="text-sm md:text-lg font-serif">
+            <div className="absolute inset-0 flex items-end px-3 pb-3 text-white">
+              <h3 className="text-xs md:text-lg font-serif">
                 Wedding Essentials
               </h3>
             </div>
@@ -112,23 +111,21 @@ export default function FeaturedSection() {
           {/* Under ₹99 */}
           <div
             onClick={() => navigate("/category/under-99")}
-            className="relative rounded-lg overflow-hidden cursor-pointer group"
+            className="relative rounded-lg overflow-hidden cursor-pointer group h-[140px] md:h-full"
           >
             <img
               src="/images/Under99/u13.jpeg"
-              alt="Under 99"
-              className="w-full h-[150px] md:h-full object-cover group-hover:scale-105 transition duration-500"
+              className="w-full h-full object-cover"
             />
 
-            <div className="absolute inset-0 flex items-end px-4 pb-4 text-white">
-              <h3 className="text-sm md:text-lg font-serif">
+            <div className="absolute inset-0 flex items-end px-3 pb-3 text-white">
+              <h3 className="text-xs md:text-lg font-serif">
                 Under ₹99
               </h3>
             </div>
           </div>
 
         </div>
-
         {/* RIGHT - Big Banner */}
         <div className="md:col-span-2 relative rounded-lg overflow-hidden group cursor-pointer">
           <img
