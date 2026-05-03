@@ -1,51 +1,64 @@
 const products = [
 
+    
+  
+
   {
     id: 1,
     name: "Earring Jumka(Pink)",
-    price: 299,
-    image: "/images/Earring/e1.png",
+    price: 120,
+    image: "/images/Earring/EBG2.jpeg",
     category: "",
     isNew: true,
     isBestSeller: false
   },
 
   {
-    id: 3,
-    name: "Decorative Steel Box(Red)",
-    price: 299,
-    image: "/images/Tiffin/tiffin-red.png",
-    category: "tiffin",
+    id: 5,
+    name: "Bhaji Box",
+    price: 420,
+    image: "/images/Tiffin/t5.jpeg",
+    category: "box",
     isNew: false,
     isBestSeller: false
   },
+
+  // {
+  //   id: 3,
+  //   name: "Decorative Steel Box(Red)",
+  //   price: 299,
+  //   image: "/images/Tiffin/tiffin-red.png",
+  //   category: "tiffin",
+  //   isNew: false,
+  //   isBestSeller: false
+  // },
   {
     id: 4,
-    name: "Decorative Steel Box(Pink)",
+    name: "Decorative Steel Box",
     price: 299,
-    image: "/images/Tiffin/tiffin-pink.png",
-    category: "tiffin",
+    image: "/images/Tiffin/t6.jpeg",
+    category: "box",
     isNew: false,
     isBestSeller: false
   },
   {
     id: 5,
-    name: "Decorative Steel Box(Green)",
-    price: 99,
-    image: "/images/Tiffin/tiffin-green.png",
-    category: "tiffin",
+    name: "Bhaji Box",
+    price: 420,
+    image: "/images/Tiffin/t5.jpeg",
+    category: "box",
     isNew: false,
     isBestSeller: false
   },
-  {
-    id: 6,
-    name: "Decorative Steel Box(Blue)",
-    price: 199,
-    image: "/images/Tiffin/tiffin-blue.png",
-    category: "tiffin",
-    isNew: true,
-    isBestSeller: false
-  },
+  // {
+  //   id: 6,
+  //   name: "Decorative Steel Box(Blue)",
+  //   price: 199,
+  //   image: "/images/Tiffin/tiffin-blue.png",
+  //   category: "tiffin",
+  //   isNew: true,
+  //   isBestSeller: false
+  // },
   {
     id: 7,
     name: "Silk Thread Jhumka",
@@ -131,9 +144,9 @@ const products = [
   
   {
     id: 16,
-    name: "Leaf stone Bangle",
+    name: "Leaf stone Bangle(1 Set)",
     price: 150,
-    image: "/images/Bangles/b8.png",
+    image: "/images/Bangles/b10.jpeg",
     category: "bangle",
     isNew: false,
     isBestSeller: true
