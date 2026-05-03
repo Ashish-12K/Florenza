@@ -8,7 +8,7 @@ const categories = [
   { name: "Candles", image: "/images/Candle/CandleBG2.jpg", slug: "nosepin" },
   { name: "Hamper", image: "/images/Hampers/HamperBG.jpg", slug: "anklet" },
   { name: "Tiffin Box", image: "/images/Tiffin/TiffinBG.png", slug: "tiffin" },
-  { name: "Wedding Bell", image: "/images/WeddingBell/WeddingBellBG.png", slug: "nosepin" },
+  { name: "Stand", image: "/images/Stand/StandBG.png", slug: "stands" },
 ];
 
 export default function Categories() {

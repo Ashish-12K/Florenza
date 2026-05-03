@@ -4,6 +4,9 @@ import NewArrivals from "../components/NewArrivals";
 import BestSellerBanner from "../components/BestSellerBanner.jsx";
 import FooterSection from "../components/FooterSection";
 import FeatureBar from "../components/FeatureBar.jsx";
+import BrandIntro from "../components/BrandIntro.jsx";
+import TrustBar from "../components/TrustBar.jsx";
+import FeaturedSection from "../components/FeaturedSection.jsx";
 
 export default function Home() {
   return (
@@ -12,7 +15,10 @@ export default function Home() {
       <Categories />
       <FeatureBar />
       <NewArrivals />
-      <BestSellerBanner />
+      <BrandIntro />
+      {/* <BestSellerBanner /> */}
+      <FeaturedSection />
+      <TrustBar />
       <FooterSection />
     </div>
   );

@@ -10,6 +10,7 @@ import OrderSuccess from "./pages/OrderSuccess";
 import CheckoutPage from "./pages/CheckoutPage";
 import ContactPage from "./pages/ContactPage";
 import AnnouncementBar from "./components/AnnouncementBar";
+import { WhatsAppButton } from "./components/WhatsAppButton";
 
 function App() {
   return (
@@ -29,6 +30,10 @@ function App() {
         <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
+
+      
+      <WhatsAppButton />
+
     </Router>
   );
 }

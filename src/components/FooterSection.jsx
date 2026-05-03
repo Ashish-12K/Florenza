@@ -76,7 +76,7 @@ export default function FooterSection() {
 
       {/* Footer bottom */}
       <div className="mt-12 flex flex-col md:flex-row justify-between text-sm text-gray-500">
-        <p>© 2026 SK Jewelry</p>
+        <p>© 2026 Florenza</p>
         <p className="cursor-pointer">Terms and Policies</p>
       </div>
 

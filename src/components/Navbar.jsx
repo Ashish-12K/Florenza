@@ -6,7 +6,7 @@ import { useState } from "react";
 export default function Navbar() {
   const { cart } = useCart();
   const navigate = useNavigate();
-  const location = useLocation(); // ✅ added
+  const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
@@ -31,23 +31,40 @@ export default function Navbar() {
         </h1>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex gap-8 text-sm font-medium">
-          <p onClick={() => navigate("/")} className="cursor-pointer hover:text-gray-500 transition">Home</p>
-          <p className="cursor-pointer hover:text-gray-500 transition">Shop</p>
-          <p onClick={() => navigate("/new-arrivals")} className="cursor-pointer hover:text-gray-500 transition">New Arrivals</p>
+        <nav className="hidden md:flex gap-8 text-sm font-medium tracking-wide uppercase">
+
+          <p
+            onClick={() => navigate("/")}
+            className="cursor-pointer hover:text-gray-500 transition"
+          >
+            Home
+          </p>
+
+          <p className="cursor-pointer hover:text-gray-500 transition">
+            Collections
+          </p>
+
+          <p
+            onClick={() => navigate("/new-arrivals")}
+            className="cursor-pointer hover:text-gray-500 transition"
+          >
+            New In
+          </p>
+
           <p
             onClick={() => navigate("/contact")}
             className="cursor-pointer hover:text-gray-500 transition"
           >
             Contact
           </p>
+
         </nav>
 
         {/* Cart */}
         <div
           onClick={() => {
             if (location.pathname === "/cart") {
-              navigate(-1); // ✅ go back if already on cart
+              navigate(-1);
             } else {
               navigate("/cart");
             }
@@ -65,7 +82,7 @@ export default function Navbar() {
 
       </div>
 
-      {/* 🔥 Mobile Sidebar */}
+      {/* Mobile Sidebar */}
       {menuOpen && (
         <>
           {/* Overlay */}
@@ -85,12 +102,27 @@ export default function Navbar() {
             </div>
 
             {/* Links */}
-            <p onClick={() => {navigate("/"); setMenuOpen(false);}} className="cursor-pointer">Home</p>
-            <p className="cursor-pointer">Shop</p>
-            <p onClick={() => {navigate("/new-arrivals"); setMenuOpen(false);}} className="cursor-pointer">New Arrivals</p>
             <p
-              onClick={() => navigate("/contact")}
-              className="cursor-pointer hover:text-gray-500 transition"
+              onClick={() => { navigate("/"); setMenuOpen(false); }}
+              className="cursor-pointer uppercase tracking-wide"
+            >
+              Home
+            </p>
+
+            <p className="cursor-pointer uppercase tracking-wide">
+              Collections
+            </p>
+
+            <p
+              onClick={() => { navigate("/new-arrivals"); setMenuOpen(false); }}
+              className="cursor-pointer uppercase tracking-wide"
+            >
+              New In
+            </p>
+
+            <p
+              onClick={() => { navigate("/contact"); setMenuOpen(false); }}
+              className="cursor-pointer uppercase tracking-wide"
             >
               Contact
             </p>
