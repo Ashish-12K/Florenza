@@ -176,7 +176,7 @@ const products = [
     name: "Ganpati Stand(2inch)",
     price: 99,
     image: "/images/Stand/stand2.jpeg",
-    category: "stands",
+    category: ["stands", "resin"],
     isNew: false,
     isBestSeller: true
   },
@@ -186,7 +186,7 @@ const products = [
     name: "Ganpati Stand(3inch)",
     price: 130,
     image: "/images/Stand/stand3.png",
-    category: "stands",
+    category: ["stands", "resin"],
     isNew: true,
     isBestSeller: true
   },
@@ -196,7 +196,7 @@ const products = [
     name: "Ganpati Stand(4inch)",
     price: 180,
     image: "/images/Stand/stand4.jpeg",
-    category: "stands",
+    category: ["stands", "resin"],
     isNew: true,
     isBestSeller: true
   },
@@ -206,6 +206,24 @@ const products = [
     name: "Premium Puja Thali",
     price: 350,
     image: "/images/Resin/PPT1.jpeg",
+    category: "resin",
+    isNew: true,
+    isBestSeller: true
+  },
+  {
+    id: 18,
+    name: "Puja Thali(4inch)",
+    price: 180,
+    image: "/images/Resin/r4.png",
+    category: "resin",
+    isNew: true,
+    isBestSeller: true
+  },
+  {
+    id: 18,
+    name: "Puja Thali(5inch)",
+    price: 220,
+    image: "/images/Resin/r2.jpeg",
     category: "resin",
     isNew: true,
     isBestSeller: true
@@ -235,6 +253,15 @@ const products = [
     name: "Orangza matka Potli Combo",
     price: 250,
     image: "/images/Potli/p2.jpeg",
+    category: "potli",
+    isNew: true,
+    isBestSeller: true
+  },
+  {
+    id: 21,
+    name: "Customized Potli Combo",
+    price: 199,
+    image: "/images/Potli/PotliBG.jpeg",
     category: "potli",
     isNew: true,
     isBestSeller: true

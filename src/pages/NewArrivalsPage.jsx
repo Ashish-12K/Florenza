@@ -1,10 +1,16 @@
 import products from "../data/products";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
+import { useEffect } from "react";
 
 export default function NewArrivalsPage() {
   const navigate = useNavigate();
   const { addToCart } = useCart();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
 
   return (
     <div className="px-3 md:px-6 py-10">
@@ -19,7 +25,7 @@ export default function NewArrivalsPage() {
         {products.map((item) => (
           <div
             key={item.id}
-            className="bg-white rounded-lg shadow-sm p-3 hover:shadow-md transition duration-300"
+           className="p-2 transition duration-300 hover:-translate-y-1"
           >
 
             {/* Image */}

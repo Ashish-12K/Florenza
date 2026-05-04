@@ -1,11 +1,17 @@
 import { useParams, useNavigate } from "react-router-dom";
 import products from "../data/products";
 import { useCart } from "../context/CartContext";
+import { useEffect } from "react";
 
 export default function CategoryPage() {
   const { category } = useParams();
   const navigate = useNavigate();
   const { addToCart } = useCart();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
 
   // 🔥 Improved filtering logic
   const filteredProducts = products.filter((item) => {
@@ -14,7 +20,7 @@ export default function CategoryPage() {
     if (category === "wedding")
       return item.tags?.includes("wedding") || item.isWedding;
 
-    return item.category === category;
+    return item.category?.includes(category);
   });
 
   // 🔥 Better heading format
@@ -45,7 +51,7 @@ export default function CategoryPage() {
         {filteredProducts.map((item) => (
           <div
             key={item.id}
-            className="bg-white rounded-lg shadow-sm p-3 hover:shadow-md hover:-translate-y-1 transition duration-300"
+            className="p-2 transition duration-300 hover:-translate-y-1"
           >
 
             {/* Image */}
