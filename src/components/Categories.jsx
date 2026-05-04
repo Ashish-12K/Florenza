@@ -19,7 +19,7 @@ export default function Categories() {
       
       {/* Heading */}
       <h2 className="text-2xl md:text-3xl font-semibold text-center tracking-wide">
-        Shop by collection
+        SHOP BY COLLECTION
       </h2>
 
       {/* Pink underline */}

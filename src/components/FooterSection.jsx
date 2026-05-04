@@ -5,19 +5,23 @@ export default function FooterSection() {
   const [openIndex, setOpenIndex] = useState(null);
 
   const faqs = [
-    {
-      question: "Do you accept returns?",
-      answer: "Yes, we accept returns within 7 days of delivery.",
-    },
-    {
-      question: "How do I request a return or replacement?",
-      answer: "You can contact us via WhatsApp or email to initiate a return.",
-    },
-    {
-      question: "When will I get my order?",
-      answer: "Orders are delivered within 5–7 business days.",
-    },
-  ];
+  {
+    question: "How to place an order?",
+    answer: "Browse products, select your item, click on 'Add to Cart', proceed to checkout and then download the order details image and Send Via WhatsApp. You can also place an order directly via WhatsApp.",
+  },
+  {
+    question: "How do I request a return or replacement?",
+    answer: "You can contact us via WhatsApp or email for any return or replacement query.",
+  },
+  {
+    question: "When will I get my order?",
+    answer: "Orders are delivered within 18-21 business days.",
+  },
+  {
+    question: "Do you take custom orders?",
+    answer: "Yes, we accept custom orders. You can contact us via WhatsApp to discuss your requirements.",
+  },
+];
 
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
