@@ -40,7 +40,24 @@ export default function Navbar() {
             Home
           </p>
 
-          <p className="cursor-pointer hover:text-gray-500 transition">
+          <p
+            onClick={() => {
+              const section = document.getElementById("collections");
+
+              if (location.pathname !== "/") {
+                navigate("/");
+
+                setTimeout(() => {
+                  document
+                    .getElementById("collections")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }, 100);
+              } else {
+                section?.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+            className="cursor-pointer hover:text-gray-500 transition"
+          >
             Collections
           </p>
 
@@ -109,7 +126,25 @@ export default function Navbar() {
               Home
             </p>
 
-            <p className="cursor-pointer uppercase tracking-wide">
+            <p
+              onClick={() => {
+                setMenuOpen(false);
+                const section = document.getElementById("collections");
+
+                if (location.pathname !== "/") {
+                  navigate("/");
+
+                  setTimeout(() => {
+                    document
+                      .getElementById("collections")
+                      ?.scrollIntoView({ behavior: "smooth" });
+                  }, 100);
+                } else {
+                  section?.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+              className="cursor-pointer hover:text-gray-500 transition"
+            >
               Collections
             </p>
 

@@ -26,7 +26,7 @@ export default function FeaturedSection() {
         {/* LEFT - Banner */}
         <div className="relative rounded-lg overflow-hidden md:col-span-2 group cursor-pointer">
           <img
-            src="/images/BannerImg.png"
+            src="/images/Earring/e1.webp"
             alt="Bestseller"
             className="w-full h-[200px] md:h-full object-cover group-hover:scale-105 transition duration-500"
           />

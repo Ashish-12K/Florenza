@@ -15,7 +15,7 @@ export default function Categories() {
   const navigate = useNavigate();
 
   return (
-    <section className="px-4 py-10">
+    <section id="collections" className="px-4 py-10">
       
       {/* Heading */}
       <h2 className="text-2xl md:text-3xl font-semibold text-center tracking-wide">

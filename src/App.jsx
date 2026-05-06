@@ -11,6 +11,8 @@ import CheckoutPage from "./pages/CheckoutPage";
 import ContactPage from "./pages/ContactPage";
 import AnnouncementBar from "./components/AnnouncementBar";
 import { WhatsAppButton } from "./components/WhatsAppButton";
+import PrivacyPage from "./pages/PrivacyPage";
+import TermsAndConditions from "./pages/TermsAndConditions";
 
 function App() {
   return (
@@ -29,8 +31,9 @@ function App() {
         <Route path="/order-success" element={<OrderSuccess />} />
         <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+        <Route path="/privacy-policy" element={<PrivacyPage />} />
       </Routes>
-
       
       <WhatsAppButton />
 

@@ -123,7 +123,7 @@ const products = [
     id: 13,
     name: "Leaf stone Bangle(1 Set)",
     price: 150,
-    image: "/images/Bangles/b10.jpeg",
+    image: "/images/Bangles/b10.webp",
     category: "bangle",
     isNew: false,
     isBestSeller: true

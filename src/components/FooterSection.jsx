@@ -81,7 +81,24 @@ export default function FooterSection() {
       {/* Footer bottom */}
       <div className="mt-12 flex flex-col md:flex-row justify-between text-sm text-gray-500">
         <p>© 2026 Florenza</p>
-        <p className="cursor-pointer">Terms and Policies</p>
+        <div className="flex gap-4">
+  <a
+    href="/terms-and-conditions"
+    className="cursor-pointer hover:text-black transition"
+  >
+    Terms & Conditions
+  </a>
+
+  <a
+    href="/privacy-policy"
+    className="cursor-pointer hover:text-black transition"
+  >
+    Privacy Policy
+  </a>
+</div>
+
+
+
       </div>
 
     </section>
