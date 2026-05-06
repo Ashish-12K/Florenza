@@ -39,7 +39,7 @@ export default function CheckoutPage() {
       amount: finalTotal * 100,
       currency: "INR",
 
-      name: "SK Jewelry",
+      name: "Florenza",
       description: "Order Payment",
 
       handler: function (response) {

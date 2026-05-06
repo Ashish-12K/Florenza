@@ -143,7 +143,7 @@ export default function Navbar() {
                   section?.scrollIntoView({ behavior: "smooth" });
                 }
               }}
-              className="cursor-pointer hover:text-gray-500 transition"
+              className="cursor-pointer uppercase tracking-wide hover:text-gray-500 transition"
             >
               Collections
             </p>
