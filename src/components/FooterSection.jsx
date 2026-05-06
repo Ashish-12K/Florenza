@@ -1,27 +1,31 @@
 import { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function FooterSection() {
   const [openIndex, setOpenIndex] = useState(null);
 
   const faqs = [
-  {
-    question: "How to place an order?",
-    answer: "Browse products, select your item, click on 'Add to Cart', proceed to checkout and then download the order details image and Send Via WhatsApp. You can also place an order directly via WhatsApp.",
-  },
-  {
-    question: "How do I request a return or replacement?",
-    answer: "You can contact us via WhatsApp or email for any return or replacement query.",
-  },
-  {
-    question: "When will I get my order?",
-    answer: "Orders are delivered within 18-21 business days.",
-  },
-  {
-    question: "Do you take custom orders?",
-    answer: "Yes, we accept custom orders. You can contact us via WhatsApp to discuss your requirements.",
-  },
-];
+    {
+      question: "How to place an order?",
+      answer:
+        "Browse products, select your item, click on 'Add to Cart', proceed to checkout and then download the order details image and Send Via WhatsApp. You can also place an order directly via WhatsApp.",
+    },
+    {
+      question: "How do I request a return or replacement?",
+      answer:
+        "You can contact us via WhatsApp or email for any return or replacement query.",
+    },
+    {
+      question: "When will I get my order?",
+      answer: "Orders are delivered within 18-21 business days.",
+    },
+    {
+      question: "Do you take custom orders?",
+      answer:
+        "Yes, we accept custom orders. You can contact us via WhatsApp to discuss your requirements.",
+    },
+  ];
 
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -37,14 +41,19 @@ export default function FooterSection() {
 
       <div className="space-y-4">
         {faqs.map((item, index) => (
-          <div key={index} className="border-b border-b-gray-300 pb-3 cursor-pointer">
+          <div
+            key={index}
+            className="border-b border-b-gray-300 pb-3 cursor-pointer"
+          >
 
             <div
               className="flex justify-between items-center"
               onClick={() => toggleFAQ(index)}
             >
               <p>{item.question}</p>
-              <span><FaChevronDown size={14} /></span>
+              <span>
+                <FaChevronDown size={14} />
+              </span>
             </div>
 
             {openIndex === index && (
@@ -62,42 +71,48 @@ export default function FooterSection() {
 
         <div>
           <h3 className="font-semibold">FOR NEW UPDATES</h3>
+
           <p className="text-sm text-gray-600 mt-1">
             Get exclusive deals and early access to new products.
           </p>
         </div>
 
         <div className="flex items-center border rounded-full px-4 py-2 w-full md:w-[350px]">
+
           <input
             type="email"
             placeholder="Email address"
             className="flex-1 outline-none bg-transparent"
           />
+
           <button>→</button>
+
         </div>
 
       </div>
 
-      {/* Footer bottom */}
-      <div className="mt-12 flex flex-col md:flex-row justify-between text-sm text-gray-500">
+      {/* Footer Bottom */}
+      <div className="mt-12 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+
         <p>© 2026 Florenza</p>
+
         <div className="flex gap-4">
-  <a
-    href="/terms-and-conditions"
-    className="cursor-pointer hover:text-black transition"
-  >
-    Terms & Conditions
-  </a>
 
-  <a
-    href="/privacy-policy"
-    className="cursor-pointer hover:text-black transition"
-  >
-    Privacy Policy
-  </a>
-</div>
+          <Link
+            to="/terms-and-conditions"
+            className="hover:text-black transition"
+          >
+            Terms & Conditions
+          </Link>
 
+          <Link
+            to="/privacy-policy"
+            className="hover:text-black transition"
+          >
+            Privacy Policy
+          </Link>
 
+        </div>
 
       </div>
 
