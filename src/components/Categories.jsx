@@ -2,13 +2,13 @@ import { useNavigate } from "react-router-dom";
 
 const categories = [
   { name: "Resin", image: "/images/Resin/PPT1.jpeg", slug: "resin" },
-  { name: "Earring", image: "/images/Earring/EarringBG.png", slug: "earring" },
-  { name: "Bangles", image: "/images/Bangles/BangleBG.png", slug: "bangle" },
+  { name: "Earring", image: "/images/Earring/EarringBG.webp", slug: "earring" },
+  { name: "Bangles", image: "/images/Bangles/BangleBG.webp", slug: "bangle" },
   { name: "Potli Bag", image: "/images/Potli/PotliBG.jpeg", slug: "potli" },
   { name: "Candles", image: "/images/Candle/CandleBG2.jpg", slug: "candle" },
-  { name: "Hamper", image: "/images/Hampers/HamperBG.jpg", slug: "hamper" },
-  { name: "Decorative Box", image: "/images/Tiffin/BoxBG.png", slug: "box" },
-  { name: "Stand", image: "/images/Stand/StandBG.png", slug: "stands" },
+  { name: "Hamper", image: "/images/Hampers/HamperBG.webp", slug: "hamper" },
+  { name: "Decorative Box", image: "/images/Tiffin/BoxBG.webp", slug: "box" },
+  { name: "Stand", image: "/images/Stand/StandBG.webp", slug: "stands" },
 ];
 
 export default function Categories() {
