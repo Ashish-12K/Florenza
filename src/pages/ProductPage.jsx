@@ -63,8 +63,8 @@ export default function ProductPage() {
           <div className="mt-4 space-y-2 text-sm text-gray-700">
             <p>✨ Premium quality</p>
             <p>🚚 Delivery charges: ₹80</p>
-            <p>⏱️ Delivery in 5–7 days</p>
-            <p>🔄 Easy replacement available</p>
+            <p>⏱️ Delivery in 14-18 days</p>
+            <p>🎨 For more color options, contact us directly on WhatsApp</p>
           </div>
 
           {/* Quantity */}
