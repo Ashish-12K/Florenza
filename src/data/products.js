@@ -509,11 +509,20 @@ const products = [
     isBestSeller: true
   },
   {
-    id: 21,
+    id: 52,
     name: "Puja Thali(6inch)",
     price: 250,
     image: "/images/Resin/r2.jpeg",
     category: "resin",
+    isNew: true,
+    isBestSeller: false
+  },
+  {
+    id: 53,
+    name: "Bangle(4set)",
+    price: 140,
+    image: "/images/Bangles/b12.webp",
+    category: "bangle",
     isNew: true,
     isBestSeller: false
   },

@@ -6,8 +6,10 @@ export default function CheckoutPage() {
   const { cart, total, clearCart } = useCart();
   const navigate = useNavigate();
 
-  // ✅ Delivery charge removed for testing
-  const finalTotal = total;
+  
+
+  const deliveryCharge = 80;
+  const finalTotal = total + deliveryCharge;
 
   const [form, setForm] = useState({
     name: "",
@@ -151,6 +153,11 @@ export default function CheckoutPage() {
         <div className="flex justify-between">
           <span>Subtotal</span>
           <span>Rs. {total}</span>
+        </div>
+
+        <div className="flex justify-between">
+          <span>Delivery</span>
+          <span>Rs. 80</span>
         </div>
 
         <div className="flex justify-between font-semibold">
