@@ -13,6 +13,7 @@ import AnnouncementBar from "./components/AnnouncementBar";
 import { WhatsAppButton } from "./components/WhatsAppButton";
 import PrivacyPage from "./pages/PrivacyPage";
 import TermsAndConditions from "./pages/TermsAndConditions";
+import BestSellerPage from "./pages/BestSellerPage";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/new-arrivals" element={<NewArrivalsPage />} />
+        <Route path="/best-sellers" element={<BestSellerPage />} />
 
         {/* 👇 ADD THIS ROUTE */}
         <Route path="/collection/:type" element={<CollectionPage />} />

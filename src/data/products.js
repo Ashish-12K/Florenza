@@ -22,7 +22,7 @@ const products = [
   {
     id: 3,
     name: "Decorative Steel Box",
-    price: 299,
+    price: 199,
     image: "/images/Tiffin/t6.jpeg",
     category: "box",
     isNew: false,
@@ -51,8 +51,8 @@ const products = [
 
   {
     id: 6,
-    name: "Mini Jhumki Studs",
-    price: 90,
+    name: "Pearl Earrings",
+    price: 180,
     image: "/images/Earring/e4.jpeg",
     category: "earring",
     isNew: true,
@@ -96,7 +96,7 @@ const products = [
     image: "/images/Bangles/b1.jpeg",
     category: "bangle",
     isNew: false,
-    isBestSeller: true
+    isBestSeller: false
   },
 
   {
@@ -106,7 +106,7 @@ const products = [
     image: "/images/Bangles/b6.jpeg",
     category: "bangle",
     isNew: false,
-    isBestSeller: true
+    isBestSeller: false
   },
 
   {
@@ -116,7 +116,7 @@ const products = [
     image: "/images/Bangles/b7.jpeg",
     category: "bangle",
     isNew: false,
-    isBestSeller: true
+    isBestSeller: false
   },
 
   {
@@ -126,7 +126,7 @@ const products = [
     image: "/images/Bangles/b10.webp",
     category: "bangle",
     isNew: false,
-    isBestSeller: true
+    isBestSeller: false
   },
 
   {
@@ -136,27 +136,27 @@ const products = [
     image: "/images/Bangles/b9.jpeg",
     category: "bangle",
     isNew: false,
-    isBestSeller: true
+    isBestSeller: false
   },
 
   {
     id: 15,
-    name: "4 Bangle Set",
-    price: 150,
+    name: "Stone Bangles",
+    price: 120,
     image: "/images/Bangles/b11.jpeg",
     category: "bangle",
     isNew: false,
-    isBestSeller: true
+    isBestSeller: false
   },
 
   {
     id: 16,
     name: "Ganpati Stand(2inch)",
-    price: 1,
+    price: 99,
     image: "/images/Stand/stand2.jpeg",
     category: ["stands", "resin"],
     isNew: false,
-    isBestSeller: true
+    isBestSeller: false
   },
 
   {
@@ -166,7 +166,7 @@ const products = [
     image: "/images/Stand/stand3.png",
     category: ["stands", "resin"],
     isNew: true,
-    isBestSeller: true
+    isBestSeller: false
   },
 
   {
@@ -176,7 +176,7 @@ const products = [
     image: "/images/Stand/stand4.jpeg",
     category: ["stands", "resin"],
     isNew: true,
-    isBestSeller: true
+    isBestSeller: false
   },
 
   {
@@ -186,7 +186,7 @@ const products = [
     image: "/images/Resin/PPT1.jpeg",
     category: "resin",
     isNew: true,
-    isBestSeller: true
+    isBestSeller: false
   },
 
   {
@@ -196,7 +196,7 @@ const products = [
     image: "/images/Resin/r4.png",
     category: "resin",
     isNew: true,
-    isBestSeller: true
+    isBestSeller: false
   },
 
   {
@@ -206,7 +206,7 @@ const products = [
     image: "/images/Resin/r2.jpeg",
     category: "resin",
     isNew: true,
-    isBestSeller: true
+    isBestSeller: false
   },
 
   {
@@ -216,7 +216,7 @@ const products = [
     image: "/images/Candle/c1.jpeg",
     category: "candle",
     isNew: true,
-    isBestSeller: true
+    isBestSeller: false
   },
 
   {
@@ -226,7 +226,7 @@ const products = [
     image: "/images/Potli/p1.jpeg",
     category: "potli",
     isNew: true,
-    isBestSeller: true
+    isBestSeller: false
   },
 
   {
@@ -236,7 +236,7 @@ const products = [
     image: "/images/Potli/p2.jpeg",
     category: "potli",
     isNew: true,
-    isBestSeller: true
+    isBestSeller: false
   },
 
   {
@@ -246,17 +246,17 @@ const products = [
     image: "/images/Potli/PotliBG.jpeg",
     category: "potli",
     isNew: true,
-    isBestSeller: true
+    isBestSeller: false
   },
 
   {
     id: 26,
     name: "Orangza Bags Combo",
     price: 250,
-    image: "/images/Potli/p4.jpeg",
+    image: "/images/Potli/p44.jpeg",
     category: "potli",
     isNew: true,
-    isBestSeller: true
+    isBestSeller: false
   },
 
   {
@@ -266,7 +266,7 @@ const products = [
     image: "/images/Potli/p7.jpeg",
     category: "potli",
     isNew: true,
-    isBestSeller: true
+    isBestSeller: false
   },
 
   {
@@ -276,7 +276,7 @@ const products = [
     image: "/images/Potli/p6.jpeg",
     category: "potli",
     isNew: true,
-    isBestSeller: true
+    isBestSeller: false
   },
 
   {
@@ -286,7 +286,7 @@ const products = [
     image: "/images/Hampers/h1.jpeg",
     category: "hamper",
     isNew: true,
-    isBestSeller: true
+    isBestSeller: false
   },
 
   {
@@ -296,7 +296,7 @@ const products = [
     image: "/images/Hampers/h3.jpeg",
     category: "hamper",
     isNew: true,
-    isBestSeller: true
+    isBestSeller: false
   },
 
   {
@@ -306,7 +306,7 @@ const products = [
     image: "/images/Hampers/h4.jpeg",
     category: "hamper",
     isNew: true,
-    isBestSeller: true
+    isBestSeller: false
   },
 
   {
@@ -316,7 +316,7 @@ const products = [
     image: "/images/Hampers/h5.jpeg",
     category: "hamper",
     isNew: true,
-    isBestSeller: true
+    isBestSeller: false
   },
 
   {
@@ -326,7 +326,7 @@ const products = [
     image: "/images/Hampers/h6.jpeg",
     category: "hamper",
     isNew: true,
-    isBestSeller: true
+    isBestSeller: false
   },
 
   {
@@ -336,7 +336,7 @@ const products = [
     image: "/images/Under99/u1.jpeg",
     category: "under99",
     isNew: true,
-    isBestSeller: true
+    isBestSeller: false
   },
 
   {
@@ -346,7 +346,7 @@ const products = [
     image: "/images/Under99/u2.jpeg",
     category: "under99",
     isNew: true,
-    isBestSeller: true
+    isBestSeller: false
   },
 
   {
@@ -356,7 +356,7 @@ const products = [
     image: "/images/Under99/u3.jpeg",
     category: "under99",
     isNew: true,
-    isBestSeller: true
+    isBestSeller: false
   },
 
   {
@@ -366,7 +366,7 @@ const products = [
     image: "/images/Under99/u4.jpeg",
     category: "under99",
     isNew: true,
-    isBestSeller: true
+    isBestSeller: false
   },
 
   {
@@ -376,7 +376,7 @@ const products = [
     image: "/images/Under99/u5.jpeg",
     category: "under99",
     isNew: true,
-    isBestSeller: true
+    isBestSeller: false
   },
 
   {
@@ -386,7 +386,7 @@ const products = [
     image: "/images/Under99/u6.jpeg",
     category: "under99",
     isNew: true,
-    isBestSeller: true
+    isBestSeller: false
   },
 
   {
@@ -396,7 +396,7 @@ const products = [
     image: "/images/Under99/u7.jpeg",
     category: "under99",
     isNew: true,
-    isBestSeller: true
+    isBestSeller: false
   },
 
   {
@@ -406,7 +406,7 @@ const products = [
     image: "/images/Under99/u8.jpeg",
     category: "under99",
     isNew: true,
-    isBestSeller: true
+    isBestSeller: false
   },
 
   {
@@ -416,7 +416,7 @@ const products = [
     image: "/images/Under99/u10.jpeg",
     category: "under99",
     isNew: true,
-    isBestSeller: true
+    isBestSeller: false
   },
 
   {
@@ -426,7 +426,7 @@ const products = [
     image: "/images/Under99/u11.jpeg",
     category: "under99",
     isNew: true,
-    isBestSeller: true
+    isBestSeller: false
   },
 
   {
@@ -436,7 +436,7 @@ const products = [
     image: "/images/Under99/u12.jpeg",
     category: "under99",
     isNew: true,
-    isBestSeller: true
+    isBestSeller: false
   },
 
   {
@@ -446,7 +446,7 @@ const products = [
     image: "/images/Under99/u13.jpeg",
     category: "under99",
     isNew: true,
-    isBestSeller: true
+    isBestSeller: false
   },
 
   {
@@ -456,7 +456,7 @@ const products = [
     image: "/images/Wedding/w2.jpeg",
     category: "wedding",
     isNew: true,
-    isBestSeller: true,
+    isBestSeller: false,
     isWedding: true
   },
 
@@ -467,7 +467,7 @@ const products = [
     image: "/images/Wedding/w3.jpeg",
     category: "wedding",
     isNew: true,
-    isBestSeller: true,
+    isBestSeller: false,
     isWedding: true
   },
 
@@ -478,9 +478,36 @@ const products = [
     image: "/images/Wedding/W1.jpeg",
     category: "wedding",
     isNew: true,
-    isBestSeller: true,
+    isBestSeller: false,
     isWedding: true
-  }
+  },
+  {
+    id: 49,
+    name: "Budget friendly Mehendi combo ",
+    price: 99,
+    image: "/images/Under99/u14.jpeg",
+    category: "under99",
+    isNew: true,
+    isBestSeller: false
+  },
+  {
+    id: 50,
+    name: "Matki combo(4.5 inch) ",
+    price: 299,
+    image: "/images/bestseller/bs1.jpeg",
+    category: "",
+    isNew: true,
+    isBestSeller: true
+  },
+  {
+    id: 51,
+    name: "Silk thread earrings and bangle set",
+    price: 180,
+    image: "/images/bestseller/bs2.jpeg",
+    category: "",
+    isNew: true,
+    isBestSeller: true
+  },
 ];
 
 export default products;

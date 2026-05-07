@@ -26,7 +26,7 @@ export default function FeaturedSection() {
         {/* LEFT - Banner */}
         <div className="relative rounded-lg overflow-hidden md:col-span-2 group cursor-pointer">
           <img
-            src="/images/Earring/e1.webp"
+            src="/images/Earring/e11.jpeg"
             alt="Bestseller"
             className="w-full h-[200px] md:h-full object-cover group-hover:scale-105 transition duration-500"
           />
@@ -41,7 +41,7 @@ export default function FeaturedSection() {
             </p>
 
             <button
-              onClick={() => navigate("/new-arrivals")}
+              onClick={() => navigate("/best-sellers")}
               className="mt-3 md:mt-4 bg-white text-black px-4 py-2 rounded-full text-xs md:text-sm"
             >
               DISCOVER NOW
