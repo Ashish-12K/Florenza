@@ -203,7 +203,7 @@ const products = [
     id: 21,
     name: "Puja Thali(5inch)",
     price: 220,
-    image: "/images/Resin/r2.jpeg",
+    image: "/images/Resin/r3.jpeg",
     category: "resin",
     isNew: true,
     isBestSeller: false
@@ -507,6 +507,15 @@ const products = [
     category: "",
     isNew: true,
     isBestSeller: true
+  },
+  {
+    id: 21,
+    name: "Puja Thali(6inch)",
+    price: 250,
+    image: "/images/Resin/r2.jpeg",
+    category: "resin",
+    isNew: true,
+    isBestSeller: false
   },
 ];
 
