@@ -152,7 +152,7 @@ const products = [
   {
     id: 16,
     name: "Ganpati Stand(2inch)",
-    price: 99,
+    price: 1,
     image: "/images/Stand/stand2.jpeg",
     category: ["stands", "resin"],
     isNew: false,

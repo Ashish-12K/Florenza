@@ -6,8 +6,8 @@ export default function CheckoutPage() {
   const { cart, total, clearCart } = useCart();
   const navigate = useNavigate();
 
-  const deliveryCharge = 80;
-  const finalTotal = total + deliveryCharge;
+  // ✅ Delivery charge removed for testing
+  const finalTotal = total;
 
   const [form, setForm] = useState({
     name: "",
@@ -35,7 +35,7 @@ export default function CheckoutPage() {
     }
 
     const options = {
-      key: "rzp_test_SbORRPRK2LfG2O",
+      key: "rzp_live_SmPJOLQXNXh6q7",
       amount: finalTotal * 100,
       currency: "INR",
 
@@ -71,7 +71,7 @@ export default function CheckoutPage() {
   return (
     <div className="px-6 py-10 max-w-3xl mx-auto">
 
-      {/* ✅ Title Updated */}
+      {/* Title */}
       <h1 className="text-xl font-semibold mb-6 border-b pb-2 inline-block">
         Delivery Details
       </h1>
@@ -82,50 +82,65 @@ export default function CheckoutPage() {
         <input
           placeholder="Full Name"
           className="w-full border p-2 rounded"
-          onChange={(e) => setForm({ ...form, name: e.target.value })}
+          onChange={(e) =>
+            setForm({ ...form, name: e.target.value })
+          }
         />
 
         <input
           placeholder="Phone Number"
           className="w-full border p-2 rounded"
-          onChange={(e) => setForm({ ...form, phone: e.target.value })}
+          onChange={(e) =>
+            setForm({ ...form, phone: e.target.value })
+          }
         />
 
-        {/* ✅ Split Address */}
         <input
           placeholder="House No / Flat No"
           className="w-full border p-2 rounded"
-          onChange={(e) => setForm({ ...form, house: e.target.value })}
+          onChange={(e) =>
+            setForm({ ...form, house: e.target.value })
+          }
         />
 
         <input
           placeholder="Street / Area"
           className="w-full border p-2 rounded"
-          onChange={(e) => setForm({ ...form, street: e.target.value })}
+          onChange={(e) =>
+            setForm({ ...form, street: e.target.value })
+          }
         />
 
         <input
           placeholder="City"
           className="w-full border p-2 rounded"
-          onChange={(e) => setForm({ ...form, city: e.target.value })}
+          onChange={(e) =>
+            setForm({ ...form, city: e.target.value })
+          }
         />
 
         <input
           placeholder="State"
           className="w-full border p-2 rounded"
-          onChange={(e) => setForm({ ...form, state: e.target.value })}
+          onChange={(e) =>
+            setForm({ ...form, state: e.target.value })
+          }
         />
 
         <input
           placeholder="Country"
           className="w-full border p-2 rounded"
-          onChange={(e) => setForm({ ...form, country: e.target.value })}
+          onChange={(e) =>
+            setForm({ ...form, country: e.target.value })
+          }
         />
 
         <input
           placeholder="Pincode"
           className="w-full border p-2 rounded"
-          onChange={(e) => setForm({ ...form, pincode: e.target.value })}
+          onChange={(e) =>
+            setForm({ ...form, pincode: e.target.value })
+          }
         />
 
       </div>
@@ -136,11 +151,6 @@ export default function CheckoutPage() {
         <div className="flex justify-between">
           <span>Subtotal</span>
           <span>Rs. {total}</span>
-        </div>
-
-        <div className="flex justify-between">
-          <span>Delivery</span>
-          <span>Rs. 80</span>
         </div>
 
         <div className="flex justify-between font-semibold">
