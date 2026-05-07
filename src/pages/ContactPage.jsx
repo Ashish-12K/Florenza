@@ -25,7 +25,7 @@ export default function ContactPage() {
 
         <div>
           <h2 className="font-semibold">Email</h2>
-          <p className="text-gray-600">support@Florenza.com</p>
+          <p className="text-gray-600">Florenzajewellery9@gmail.com</p>
         </div>
 
       </div>
