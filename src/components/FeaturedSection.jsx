@@ -74,7 +74,7 @@ export default function FeaturedSection() {
 
                 <button
                   onClick={() => addToCart(item)}
-                  className="mt-2 md:mt-3 w-full bg-[#a97142] text-white py-2 rounded-full text-xs md:text-sm"
+                  className="mt-2 md:mt-3 w-full bg-[#de8f8f] text-white py-2 rounded-full text-xs md:text-sm hover:bg-[#d67d7d] transition"
                 >
                   ADD TO CART
                 </button>

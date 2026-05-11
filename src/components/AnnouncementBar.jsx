@@ -1,6 +1,6 @@
 export default function AnnouncementBar() {
   return (
-    <div className="bg-[#a97142] text-white py-2 overflow-hidden">
+    <div className="bg-[#eb8495] text-white py-2 overflow-hidden text-[15px] md:text-sm">
       <div className="marquee gap-10">
 
         <div className="flex gap-15 px-4">

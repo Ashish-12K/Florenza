@@ -82,7 +82,7 @@ export default function CategoryPage() {
                 e.stopPropagation();
                 addToCart(item);
               }}
-              className="mt-3 w-full bg-[#a97142] text-white py-2 rounded-full text-xs hover:opacity-90"
+              className="mt-3 w-full bg-[#de8f8f] text-white py-2 rounded-full text-xs hover:bg-[#d67d7d] transition"
             >
               ADD TO CART
             </button>
