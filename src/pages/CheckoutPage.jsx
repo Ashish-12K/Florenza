@@ -6,6 +6,8 @@ export default function CheckoutPage() {
   const { cart, total, clearCart } = useCart();
   const navigate = useNavigate();
 
+  
+
   const deliveryCharge = 80;
   const finalTotal = total + deliveryCharge;
 
@@ -16,49 +18,9 @@ export default function CheckoutPage() {
     street: "",
     city: "",
     state: "",
-    country: "India",
+    country: "",
     pincode: "",
   });
-
-  const states = [
-    "Andaman and Nicobar Islands",
-    "Andhra Pradesh",
-    "Arunachal Pradesh",
-    "Assam",
-    "Bihar",
-    "Chandigarh",
-    "Chhattisgarh",
-    "Dadra and Nagar Haveli",
-    "Daman and Diu",
-    "Delhi",
-    "Goa",
-    "Gujarat",
-    "Haryana",
-    "Himachal Pradesh",
-    "Jammu and Kashmir",
-    "Jharkhand",
-    "Karnataka",
-    "Kerala",
-    "Ladakh",
-    "Lakshadweep",
-    "Madhya Pradesh",
-    "Maharashtra",
-    "Manipur",
-    "Meghalaya",
-    "Mizoram",
-    "Nagaland",
-    "Odisha",
-    "Puducherry",
-    "Punjab",
-    "Rajasthan",
-    "Sikkim",
-    "Tamil Nadu",
-    "Telangana",
-    "Tripura",
-    "Uttar Pradesh",
-    "Uttarakhand",
-    "West Bengal",
-  ];
 
   const handlePayment = () => {
     if (!window.Razorpay) {
@@ -66,6 +28,7 @@ export default function CheckoutPage() {
       return;
     }
 
+    // ✅ Validation
     for (let key in form) {
       if (!form[key]) {
         alert("Please fill all details");
@@ -74,11 +37,11 @@ export default function CheckoutPage() {
     }
 
     const options = {
-      key: "rzp_test_SbORRPRK2LfG2O",
+      key: "rzp_live_SmPJOLQXNXh6q7",
       amount: finalTotal * 100,
       currency: "INR",
 
-      name: "Elegant Jewellery",
+      name: "Florenza",
       description: "Order Payment",
 
       handler: function (response) {
@@ -99,7 +62,7 @@ export default function CheckoutPage() {
       },
 
       theme: {
-        color: "#111111",
+        color: "#000000",
       },
     };
 
@@ -107,140 +70,107 @@ export default function CheckoutPage() {
     rzp.open();
   };
 
-  const inputStyle =
-    "w-full border border-gray-200 focus:border-black outline-none p-3 rounded-lg text-sm placeholder:text-xs";
-
   return (
-    <div className="bg-[#fafafa] min-h-screen py-10 px-4">
+    <div className="px-6 py-10 max-w-3xl mx-auto">
 
-      <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8">
+      {/* Title */}
+      <h1 className="text-xl font-semibold mb-6 border-b pb-2 inline-block">
+        Delivery Details
+      </h1>
 
-        <h1 className="text-2xl font-semibold mb-1">
-          Checkout
-        </h1>
+      {/* Form */}
+      <div className="space-y-4">
 
-        <p className="text-sm text-gray-500 mb-8">
-          Enter your delivery details
-        </p>
+        <input
+          placeholder="Full Name"
+          className="w-full border p-2 rounded"
+          onChange={(e) =>
+            setForm({ ...form, name: e.target.value })
+          }
+        />
 
-        {/* Form */}
-        <div className="space-y-4">
+        <input
+          placeholder="Phone Number"
+          className="w-full border p-2 rounded"
+          onChange={(e) =>
+            setForm({ ...form, phone: e.target.value })
+          }
+        />
 
-          <input
-            placeholder="Full Name"
-            className={inputStyle}
-            onChange={(e) =>
-              setForm({ ...form, name: e.target.value })
-            }
-          />
+        <input
+          placeholder="House No / Flat No"
+          className="w-full border p-2 rounded"
+          onChange={(e) =>
+            setForm({ ...form, house: e.target.value })
+          }
+        />
 
-          <input
-            placeholder="Phone Number"
-            className={inputStyle}
-            onChange={(e) =>
-              setForm({ ...form, phone: e.target.value })
-            }
-          />
+        <input
+          placeholder="Street / Area"
+          className="w-full border p-2 rounded"
+          onChange={(e) =>
+            setForm({ ...form, street: e.target.value })
+          }
+        />
 
-          <input
-            placeholder="House No / Flat No"
-            className={inputStyle}
-            onChange={(e) =>
-              setForm({ ...form, house: e.target.value })
-            }
-          />
+        <input
+          placeholder="City"
+          className="w-full border p-2 rounded"
+          onChange={(e) =>
+            setForm({ ...form, city: e.target.value })
+          }
+        />
 
-          <input
-            placeholder="Street / Area"
-            className={inputStyle}
-            onChange={(e) =>
-              setForm({ ...form, street: e.target.value })
-            }
-          />
+        <input
+          placeholder="State"
+          className="w-full border p-2 rounded"
+          onChange={(e) =>
+            setForm({ ...form, state: e.target.value })
+          }
+        />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <input
+          placeholder="Country"
+          className="w-full border p-2 rounded"
+          onChange={(e) =>
+            setForm({ ...form, country: e.target.value })
+          }
+        />
 
-            <input
-              placeholder="City"
-              className={inputStyle}
-              onChange={(e) =>
-                setForm({ ...form, city: e.target.value })
-              }
-            />
+        <input
+          placeholder="Pincode"
+          className="w-full border p-2 rounded"
+          onChange={(e) =>
+            setForm({ ...form, pincode: e.target.value })
+          }
+        />
 
-            <input
-              placeholder="Pincode"
-              className={inputStyle}
-              onChange={(e) =>
-                setForm({ ...form, pincode: e.target.value })
-              }
-            />
+      </div>
 
-          </div>
+      {/* Summary */}
+      <div className="mt-8 border-t pt-6 space-y-2">
 
-          {/* State + Country */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-
-            <select
-              className={inputStyle}
-              onChange={(e) =>
-                setForm({ ...form, state: e.target.value })
-              }
-              defaultValue=""
-            >
-              <option value="" disabled>
-                Select State
-              </option>
-
-              {states.map((state) => (
-                <option key={state} value={state}>
-                  {state}
-                </option>
-              ))}
-            </select>
-
-            <select
-              className={inputStyle}
-              value="India"
-              disabled
-            >
-              <option>India</option>
-            </select>
-
-          </div>
-
+        <div className="flex justify-between">
+          <span>Subtotal</span>
+          <span>Rs. {total}</span>
         </div>
 
-        {/* Summary */}
-        <div className="mt-10 border-t border-gray-100 pt-6">
-
-          <div className="space-y-3">
-
-            <div className="flex justify-between text-sm text-gray-600">
-              <span>Subtotal</span>
-              <span>₹ {total}</span>
-            </div>
-
-            <div className="flex justify-between text-sm text-gray-600">
-              <span>Delivery</span>
-              <span>₹ 80</span>
-            </div>
-
-            <div className="flex justify-between text-lg font-semibold pt-2">
-              <span>Total</span>
-              <span>₹ {finalTotal}</span>
-            </div>
-
-          </div>
-
-          <button
-            onClick={handlePayment}
-            className="mt-6 w-full bg-black text-white py-3 rounded-xl hover:bg-gray-900 transition text-sm font-medium"
-          >
-            Proceed to Payment
-          </button>
-
+        <div className="flex justify-between">
+          <span>Delivery</span>
+          <span>Rs. 80</span>
         </div>
+
+        <div className="flex justify-between font-semibold">
+          <span>Total</span>
+          <span>Rs. {finalTotal}</span>
+        </div>
+
+        <button
+          onClick={handlePayment}
+          className="mt-4 w-full bg-black text-white py-3 rounded hover:bg-gray-800 transition"
+        >
+          Pay Now
+        </button>
 
       </div>
 
