@@ -6,8 +6,6 @@ export default function CheckoutPage() {
   const { cart, total, clearCart } = useCart();
   const navigate = useNavigate();
 
-  
-
   const deliveryCharge = 80;
   const finalTotal = total + deliveryCharge;
 
@@ -18,9 +16,49 @@ export default function CheckoutPage() {
     street: "",
     city: "",
     state: "",
-    country: "",
+    country: "India",
     pincode: "",
   });
+
+  const states = [
+    "Andaman and Nicobar Islands",
+    "Andhra Pradesh",
+    "Arunachal Pradesh",
+    "Assam",
+    "Bihar",
+    "Chandigarh",
+    "Chhattisgarh",
+    "Dadra and Nagar Haveli",
+    "Daman and Diu",
+    "Delhi",
+    "Goa",
+    "Gujarat",
+    "Haryana",
+    "Himachal Pradesh",
+    "Jammu and Kashmir",
+    "Jharkhand",
+    "Karnataka",
+    "Kerala",
+    "Ladakh",
+    "Lakshadweep",
+    "Madhya Pradesh",
+    "Maharashtra",
+    "Manipur",
+    "Meghalaya",
+    "Mizoram",
+    "Nagaland",
+    "Odisha",
+    "Puducherry",
+    "Punjab",
+    "Rajasthan",
+    "Sikkim",
+    "Tamil Nadu",
+    "Telangana",
+    "Tripura",
+    "Uttar Pradesh",
+    "Uttarakhand",
+    "West Bengal",
+  ];
 
   const handlePayment = () => {
     if (!window.Razorpay) {
@@ -28,7 +66,7 @@ export default function CheckoutPage() {
       return;
     }
 
-    // ✅ Validation
+    // Validation
     for (let key in form) {
       if (!form[key]) {
         alert("Please fill all details");
@@ -62,7 +100,7 @@ export default function CheckoutPage() {
       },
 
       theme: {
-        color: "#000000",
+        color: "#111111",
       },
     };
 
@@ -70,107 +108,152 @@ export default function CheckoutPage() {
     rzp.open();
   };
 
+  const inputStyle =
+    "w-full border border-gray-200 focus:border-black outline-none rounded-xl px-4 py-3 text-sm placeholder:text-xs placeholder:text-gray-400 transition";
+
   return (
-    <div className="px-6 py-10 max-w-3xl mx-auto">
+    <div className="bg-[#fafafa] min-h-screen py-10 px-4">
 
-      {/* Title */}
-      <h1 className="text-xl font-semibold mb-6 border-b pb-2 inline-block">
-        Delivery Details
-      </h1>
+      <div className="max-w-3xl mx-auto bg-white border border-gray-100 rounded-2xl shadow-sm p-6 md:p-8">
 
-      {/* Form */}
-      <div className="space-y-4">
+        {/* Heading */}
+        <h1 className="text-2xl font-light tracking-wide">
+          Checkout
+        </h1>
 
-        <input
-          placeholder="Full Name"
-          className="w-full border p-2 rounded"
-          onChange={(e) =>
-            setForm({ ...form, name: e.target.value })
-          }
-        />
+        <p className="text-sm text-gray-500 mt-1 mb-8">
+          Enter your delivery details
+        </p>
 
-        <input
-          placeholder="Phone Number"
-          className="w-full border p-2 rounded"
-          onChange={(e) =>
-            setForm({ ...form, phone: e.target.value })
-          }
-        />
+        {/* Form */}
+        <div className="space-y-4">
 
-        <input
-          placeholder="House No / Flat No"
-          className="w-full border p-2 rounded"
-          onChange={(e) =>
-            setForm({ ...form, house: e.target.value })
-          }
-        />
+          <input
+            placeholder="Full Name"
+            className={inputStyle}
+            onChange={(e) =>
+              setForm({ ...form, name: e.target.value })
+            }
+          />
 
-        <input
-          placeholder="Street / Area"
-          className="w-full border p-2 rounded"
-          onChange={(e) =>
-            setForm({ ...form, street: e.target.value })
-          }
-        />
+          <input
+            placeholder="Phone Number"
+            className={inputStyle}
+            onChange={(e) =>
+              setForm({ ...form, phone: e.target.value })
+            }
+          />
 
-        <input
-          placeholder="City"
-          className="w-full border p-2 rounded"
-          onChange={(e) =>
-            setForm({ ...form, city: e.target.value })
-          }
-        />
+          <input
+            placeholder="House No / Flat No"
+            className={inputStyle}
+            onChange={(e) =>
+              setForm({ ...form, house: e.target.value })
+            }
+          />
 
-        <input
-          placeholder="State"
-          className="w-full border p-2 rounded"
-          onChange={(e) =>
-            setForm({ ...form, state: e.target.value })
-          }
-        />
+          <input
+            placeholder="Street / Area"
+            className={inputStyle}
+            onChange={(e) =>
+              setForm({ ...form, street: e.target.value })
+            }
+          />
 
-        <input
-          placeholder="Country"
-          className="w-full border p-2 rounded"
-          onChange={(e) =>
-            setForm({ ...form, country: e.target.value })
-          }
-        />
+          {/* City + Pincode */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
-        <input
-          placeholder="Pincode"
-          className="w-full border p-2 rounded"
-          onChange={(e) =>
-            setForm({ ...form, pincode: e.target.value })
-          }
-        />
+            <input
+              placeholder="City"
+              className={inputStyle}
+              onChange={(e) =>
+                setForm({ ...form, city: e.target.value })
+              }
+            />
 
-      </div>
+            <input
+              placeholder="Pincode"
+              className={inputStyle}
+              onChange={(e) =>
+                setForm({ ...form, pincode: e.target.value })
+              }
+            />
 
-      {/* Summary */}
-      <div className="mt-8 border-t pt-6 space-y-2">
+          </div>
 
-        <div className="flex justify-between">
-          <span>Subtotal</span>
-          <span>Rs. {total}</span>
+          {/* State + Country */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+            <select
+              className={inputStyle}
+              defaultValue=""
+              onChange={(e) =>
+                setForm({ ...form, state: e.target.value })
+              }
+            >
+              <option value="" disabled>
+                Select State
+              </option>
+
+              {states.map((state) => (
+                <option key={state} value={state}>
+                  {state}
+                </option>
+              ))}
+            </select>
+
+            <select
+              className={inputStyle}
+              value="India"
+              disabled
+            >
+              <option>India</option>
+            </select>
+
+          </div>
+
         </div>
 
-        <div className="flex justify-between">
-          <span>Delivery</span>
-          <span>Rs. 80</span>
-        </div>
+        {/* Summary */}
+        <div className="mt-10 border-t border-gray-100 pt-6">
 
-        <div className="flex justify-between font-semibold">
-          <span>Total</span>
-          <span>Rs. {finalTotal}</span>
-        </div>
+          <div className="space-y-3">
 
-        <button
-          onClick={handlePayment}
-          className="mt-4 w-full bg-black text-white py-3 rounded hover:bg-gray-800 transition"
-        >
-          Pay Now
-        </button>
+            <div className="flex justify-between text-sm text-gray-600">
+
+              <span>Subtotal</span>
+
+              <span>₹ {total}</span>
+
+            </div>
+
+            <div className="flex justify-between text-sm text-gray-600">
+
+              <span>Delivery</span>
+
+              <span>₹ 80</span>
+
+            </div>
+
+            <div className="flex justify-between text-lg font-medium pt-2">
+
+              <span>Total</span>
+
+              <span>₹ {finalTotal}</span>
+
+            </div>
+
+          </div>
+
+          {/* Payment Button */}
+          <button
+            onClick={handlePayment}
+            className="mt-7 w-full bg-black text-white rounded-full py-3 text-[17px] font-light tracking-wide hover:bg-gray-900 transition duration-300"
+          >
+            Proceed to Payment
+          </button>
+
+        </div>
 
       </div>
 
