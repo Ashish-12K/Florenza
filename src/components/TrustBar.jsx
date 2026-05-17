@@ -2,7 +2,7 @@ import { FiHeadphones, FiTruck, FiShield, FiCheckCircle } from "react-icons/fi";
 
 export default function TrustBar() {
   return (
-    <section className="bg-[#f3f1ee] px-6 py-10">
+    <section className="bg-gradient-to-br from-[#fff7f8] via-[#fff0f5] to-[#fdebf3] px-6 py-10">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center md:text-left">
 
         {/* Item 1 */}

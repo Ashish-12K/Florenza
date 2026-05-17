@@ -21,6 +21,9 @@ export default function Categories() {
       <h2 className="text-2xl md:text-3xl font-semibold text-center tracking-wide">
         SHOP BY COLLECTION
       </h2>
+      <p className="text-sm text-gray-600 text-center mt-1">
+   Discover timeless handcrafted creations.
+</p>
 
       {/* Pink underline */}
       <div className="flex justify-center mt-2 mb-8">
